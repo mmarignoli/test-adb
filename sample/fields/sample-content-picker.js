@@ -30,7 +30,13 @@ define(function(require, exports, module) {
                         "_type": this.options.contentType
                     },
                     "mappings": {
-                        "value": "_doc",
+                        "value": {
+                            "id": "_doc",
+                            "ref": "node://824bb3e46ebd8c712033/015edf632778e2914d4d/8e7a294fcdced19898ae/",
+                            "title": "title"
+                            "qname": "_qname",
+                            "typeQName": "_type"
+                        },
                         "text": "title"
                     }
                 }
