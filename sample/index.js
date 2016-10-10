@@ -10,7 +10,7 @@ define(function(require) {
     //require("./actions/sample/create-sample-space.js");
 
     // sample form fields
-    //require("./fields/sample-city-picker.js");
+    require("./fields/sample-city-picker.js");
     require("./fields/sample-content-picker.js");
 
     // sample override to document-properties
