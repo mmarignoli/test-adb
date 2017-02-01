@@ -30,7 +30,7 @@ define(function(require, exports, module) {
                         "_type": this.options.contentType
                     },
                     "mappings": {
-                        "value": "_doc",
+                        "value": "key",
                         "text": "title"
                     }
                 }
