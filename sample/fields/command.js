@@ -20,13 +20,13 @@ define(function(require, exports, module) {
         },
         
         postRender: function(callback) {
-            //var deviceCommand = control.childrenByPropertyId["deviceCommand"];
-            //var deviceCommandParameterInstances = control.childrenByPropertyId["deviceCommandParameterInstances"];
-            //team.deviceCommandParameterInstances(deviceCommand, function(val) {
-            //    this.refresh();
-            //});
             var self = this;
-
+            var deviceCommand = self.childrenByPropertyId["deviceCommand"];
+            var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
+            team.deviceCommandParameterInstances(deviceCommand, function(val) {
+                this.refresh();
+            });
+            
             this.base(function() {
 
                 callback();
