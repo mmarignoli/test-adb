@@ -20,11 +20,11 @@ define(function(require, exports, module) {
         },
         
         postRender: function(control) {
-            var deviceCommand = control.childrenByPropertyId["deviceCommand"];
-            var deviceCommandParameterInstances = control.childrenByPropertyId["deviceCommandParameterInstances"];
-            team.deviceCommandParameterInstances(deviceCommand, function(val) {
+            //var deviceCommand = control.childrenByPropertyId["deviceCommand"];
+            //var deviceCommandParameterInstances = control.childrenByPropertyId["deviceCommandParameterInstances"];
+            //team.deviceCommandParameterInstances(deviceCommand, function(val) {
                 this.refresh();
-            });
+            //});
         },
         
         setup: function () {
