@@ -31,22 +31,6 @@ define(function(require, exports, module) {
 
             this.base();
 
-            if (!this.options.contentType) {
-                this.options.contentType = "catalog:product";
-            }
-
-            this.options.dataSource = {
-                "connector": true,
-                "config": {
-                    "query": {
-                        "_type": this.options.contentType
-                    },
-                    "mappings": {
-                        "value": "key",
-                        "text": "title"
-                    }
-                }
-            };
         }
 
     }));
