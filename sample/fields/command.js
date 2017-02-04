@@ -23,7 +23,7 @@ define(function(require, exports, module) {
             //var deviceCommand = control.childrenByPropertyId["deviceCommand"];
             //var deviceCommandParameterInstances = control.childrenByPropertyId["deviceCommandParameterInstances"];
             //team.deviceCommandParameterInstances(deviceCommand, function(val) {
-                this.refresh();
+            //    this.refresh();
             //});
         },
         
