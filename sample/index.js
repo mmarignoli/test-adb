@@ -12,6 +12,7 @@ define(function(require) {
     // sample form fields
     require("./fields/sample-city-picker.js");
     require("./fields/sample-content-picker.js");
+    require("./fields/command.js");
 
     // sample override to document-properties
     //require("./gadgets/sample-product-document-properties/sample-product-document-properties.js");
