@@ -19,7 +19,7 @@ define(function(require, exports, module) {
             return "custom";
         },
         
-        postRender: function(control) {
+        postRender: function(callback) {
             //var deviceCommand = control.childrenByPropertyId["deviceCommand"];
             //var deviceCommandParameterInstances = control.childrenByPropertyId["deviceCommandParameterInstances"];
             //team.deviceCommandParameterInstances(deviceCommand, function(val) {
