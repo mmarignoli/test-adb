@@ -23,8 +23,8 @@ define(function(require, exports, module) {
             var self = this;
             var deviceCommand = self.childrenByPropertyId["deviceCommand"];
             var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
-            team.deviceCommandParameterInstances(deviceCommand, function(val) {
-                this.refresh();
+            deviceCommand.on("change", function() {
+                deviceCommandParameterInstances.refresh();
             });
             
             this.base(function() {
