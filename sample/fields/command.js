@@ -25,6 +25,13 @@ define(function(require, exports, module) {
             //team.deviceCommandParameterInstances(deviceCommand, function(val) {
             //    this.refresh();
             //});
+            var self = this;
+
+            this.base(function() {
+
+                callback();
+
+            });
         },
         
         setup: function () {
