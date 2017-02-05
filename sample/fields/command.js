@@ -21,7 +21,7 @@ define(function(require, exports, module) {
         
         postRender: function(callback) {
             var self = this;
-            var deviceCommand = self.getControlByPath("deviceCommand");
+            var deviceCommand = self.childrenByPropertyId["deviceCommand"];
             var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
             deviceCommandParameterInstances.subscribe(deviceCommand, function(val) {
                 var successCallback = function(obj) {
