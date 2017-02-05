@@ -15,7 +15,6 @@ define(function(require, exports, module) {
      */
     return UI.registerField("command-parameter", Alpaca.Fields.ObjectField.extend({
 
-    {
         /**
          * @see Alpaca.Fields.ObjectField#getFieldType
          */
