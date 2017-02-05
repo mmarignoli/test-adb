@@ -25,7 +25,7 @@ define(function(require, exports, module) {
             var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
             deviceCommandParameterInstances.subscribe(deviceCommand, function(val) {
                 var successCallback = function(obj) {
-                    self.setValue(obj);
+                    this.setValue(obj);
                 }
                 var commandParameters = this.connector.loadData(val.childrenById("ref"), null, successCallback, null);
             });
