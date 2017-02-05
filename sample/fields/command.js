@@ -27,12 +27,8 @@ define(function(require, exports, module) {
                 var successCallback = function(obj) {
                     this.setValue(obj);
                 }
-                var config = {
-                    "query": {
-                        "_type": this.options.contentType
-                    }
-                };
-                var commandParameters = deviceCommandParameterInstances.connector.loadDataSource(config, successCallback);
+                var nodeId = this.data;
+                var commandParameters = deviceCommandParameterInstances.connector.loadData(nodeId, null, successCallback, null);
             });
             
             this.base(function() {
