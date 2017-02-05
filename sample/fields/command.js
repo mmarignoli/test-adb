@@ -23,7 +23,7 @@ define(function(require, exports, module) {
             var self = this;
             var deviceCommand = self.childrenByPropertyId["deviceCommand"];
             deviceCommand.on("ready", function() {
-                var deviceCommandParameterInstances = self.parent.childrenByPropertyId["deviceCommandParameterInstances"];
+                var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
                 var successCallback = function(obj) {
                     this.setValue(obj);
                 }
