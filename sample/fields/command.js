@@ -22,12 +22,12 @@ define(function(require, exports, module) {
         postRender: function(callback) {
             var self = this;
             var deviceCommand = self.childrenByPropertyId["deviceCommand"];
-            var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
-            deviceCommandParameterInstances.subscribe(deviceCommand, function(val) {
+            deviceCommand.on("fieldupdate", function() {
+                var deviceCommandParameterInstances = self.parent.childrenByPropertyId["deviceCommandParameterInstances"];
                 var successCallback = function(obj) {
                     this.setValue(obj);
                 }
-                var commandParameters = this.connector.loadData(val.childrenById("ref"), null, successCallback, null);
+                var commandParameters = deviceCommandParameterInstances.connector.loadData(this.childrenById("ref"), null, successCallback, null);
             });
             
             this.base(function() {
