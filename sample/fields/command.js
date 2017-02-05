@@ -23,8 +23,11 @@ define(function(require, exports, module) {
             var self = this;
             var deviceCommand = self.childrenByPropertyId["deviceCommand"];
             var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
-            deviceCommand.on("change", function() {
-                deviceCommandParameterInstances.setValue(Alpaca.parseJSON('[{"test"}, {"test2"}]'));
+            deviceCommandParameterInstances.subscribe(deviceCommand, function(val) {
+                successCallback: function(obj) {
+                    self.setValue(obj);
+                }
+                var commandParameters = this.connector.loadData(val.childrenById("ref"), null, successCallback, null);
             });
             
             this.base(function() {
