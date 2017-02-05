@@ -24,7 +24,7 @@ define(function(require, exports, module) {
             var deviceCommand = self.childrenByPropertyId["deviceCommand"];
             var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
             deviceCommand.on("change", function() {
-                deviceCommandParameterInstances.refresh();
+                deviceCommandParameterInstances.setValue(Alpaca.parseJSON('[{"test"}, {"test2"}]'));
             });
             
             this.base(function() {
