@@ -14,6 +14,19 @@ define(function(require, exports, module) {
      * The select control will populate with all instances of the specified type.
      */
     return UI.registerField("sample-content-picker", Alpaca.Fields.SelectField.extend({
+        
+        generateItem: function(e) {
+            var t = e.ref;
+            t || (t = e.reference), "function" == typeof t && (t = t.call(e));
+            var n = e._doc;
+            return n || (n = e.id), {
+                id: n,
+                ref: t,
+                title: e.title ? e.title : n,
+                qname: e.objectType ? e.getQName(): null,
+                typeQName: e.objectType ? e.getTypeQName(): null
+            }
+        },
 
         setup: function () {
 
