@@ -21,17 +21,19 @@ define(function(require, exports, module) {
         
         postRender: function(callback) {
             var self = this;
-            var deviceCommand = self.childrenByPropertyId["deviceCommand"];
-            deviceCommand.on("change", function() {
-                var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
-                var successCallback = function(obj) {
-                    deviceCommandParameterInstances.setValue(obj.deviceCommandParameterInstances);
-                }
-                var nodeId = this.data;
-                if nodeId != ""
-                    deviceCommandParameterInstances.connector.loadData(nodeId, null, successCallback, null);
-                else
-                    deviceCommandParameterInstances.setvalue("[]");
+            self.on("ready", function() {
+                var deviceCommand = self.childrenByPropertyId["deviceCommand"];
+                deviceCommand.on("change", function() {
+                    var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
+                    var successCallback = function(obj) {
+                        deviceCommandParameterInstances.setValue(obj.deviceCommandParameterInstances);
+                    }
+                    var nodeId = this.data;
+                    if nodeId != ""
+                        deviceCommandParameterInstances.connector.loadData(nodeId, null, successCallback, null);
+                    else
+                        deviceCommandParameterInstances.setvalue("[]");
+                })
             });
             
             this.base(function() {
