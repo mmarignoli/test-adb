@@ -22,7 +22,7 @@ define(function(require, exports, module) {
         postRender: function(callback) {
             var self = this;
             self.on("ready", function() {
-                var deviceCommand = self.childrenByPropertyId["deviceCommand"];
+                var deviceCommand = self.childrenByPropertyId["deviceCommandCode"];
                 deviceCommand.on("change", function() {
                     var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
                     var successCallback = function(obj) {
