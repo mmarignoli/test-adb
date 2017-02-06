@@ -29,10 +29,12 @@ define(function(require, exports, module) {
                         deviceCommandParameterInstances.setValue(obj.deviceCommandParameterInstances);
                     }
                     var nodeId = this.data;
-                    if nodeId != ""
+                    if (nodeId != "") {
                         deviceCommandParameterInstances.connector.loadData(nodeId, null, successCallback, null);
-                    else
+                    }
+                    else {
                         deviceCommandParameterInstances.setvalue("[]");
+                    }
                 })
             });
             
