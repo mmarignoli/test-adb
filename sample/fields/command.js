@@ -56,11 +56,10 @@ define(function(require, exports, module) {
         postRender: function(callback) {
             var self = this;
             self.on("ready", function() {
-                var deviceCommand = self.childrenByPropertyId["deviceCommandCode"];
+                var deviceCommand = self.childrenByPropertyId["deviceCommandId"];
                 deviceCommand.on("change", function() {
                     var deviceCommandParameterInstances = self.childrenByPropertyId["deviceCommandParameterInstances"];
                     var successCallback = function(obj) {
-                        deviceCommandParameterInstances.data = obj.deviceCommandParameterInstances;
                         deviceCommandParameterInstances.setValue(obj.deviceCommandParameterInstances);
                     }
                     var nodeId = this.data;
@@ -70,6 +69,7 @@ define(function(require, exports, module) {
                     else {
                         deviceCommandParameterInstances.setvalue("[]");
                     }
+                    self.refresh();
                 })
             });
             
