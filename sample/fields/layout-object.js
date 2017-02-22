@@ -31,7 +31,7 @@ define(function(require, exports, module) {
 
             var viewTemplateDescriptor = this.view.getTemplateDescriptor(this.getTemplateDescriptorId(), this);
             var globalTemplateDescriptor = this.view.getGlobalTemplateDescriptor();
-            var layout = this.view.getLayout();
+            var layout = this.options.layout;
 
             // we only allow the global or layout template to be applied to the top-most field
             var trip = false;
