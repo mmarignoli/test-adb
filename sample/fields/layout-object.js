@@ -3,7 +3,7 @@ define(function(require, exports, module) {
     var UI = require("ui");
     var Alpaca = require("alpaca");
 
-    return UI.registerField("layout-object", Alpaca.Fields.SelectField.extend({
+    return UI.registerField("layout-object", Alpaca.Fields.ObjectField.extend({
         
         setup: function()
         {
