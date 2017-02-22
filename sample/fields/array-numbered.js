@@ -7,7 +7,7 @@ define(function(require, exports, module) {
        
         createItem: function(index, itemSchema, itemOptions, itemData, postRenderCallback)
         {
-            itemOptions.label = itemOptions.label + " " + index + " ";
+            itemOptions.label = itemOptions.label + " " + index+1 + " ";
             this.base(index, itemSchema, itemOptions, itemData, postRenderCallback);
         }
 
