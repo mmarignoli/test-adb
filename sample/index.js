@@ -16,6 +16,7 @@ define(function(require) {
     require("./fields/command-parameter.js");
     require("./fields/layout-object.js");
     require("./fields/array-numbered.js");
+    require("./fields/upper-field.js");
 
     // sample override to document-properties
     //require("./gadgets/sample-product-document-properties/sample-product-document-properties.js");
